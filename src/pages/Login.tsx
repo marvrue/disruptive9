@@ -29,7 +29,7 @@ const Login = () => {
           >
             <Card>
               <CardHeader className="text-center">
-                <CardTitle>Kundenbereich</CardTitle>
+                <CardTitle className="text-accent-teal">Kundenbereich</CardTitle>
                 <CardDescription>Melden Sie sich mit Ihren Zugangsdaten an</CardDescription>
               </CardHeader>
               <CardContent>
@@ -48,7 +48,7 @@ const Login = () => {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <Label htmlFor="password">Passwort</Label>
-                      <a href="#" className="text-sm text-accent-purple hover:underline">
+                      <a href="#" className="text-sm text-accent-orange hover:underline">
                         Passwort vergessen?
                       </a>
                     </div>
@@ -60,7 +60,9 @@ const Login = () => {
                       required 
                     />
                   </div>
-                  <button type="submit" className="button-primary w-full">
+                  <button type="submit" className="w-full py-3 bg-accent-teal text-white rounded-lg 
+                           hover:bg-accent-teal/90 transition-all duration-200
+                           font-medium tracking-wide shadow-sm hover:shadow-md">
                     Anmelden
                   </button>
                 </form>

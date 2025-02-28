@@ -9,25 +9,25 @@ const About = () => {
       name: "Marvin Rützel",
       role: "Gründer & Geschäftsführer",
       bio: "Mit über 10 Jahren Erfahrung in der Realwirtschaft und OpEx-Specialist für digitale Transformation und KI-Implementation.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
       name: "Julia Schneider",
       role: "Leiterin Prozessoptimierung",
       bio: "Expertin für Workflow-Optimierung und Implementierung von schlanken Geschäftsprozessen.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
       name: "Thomas Müller",
       role: "KI-Strategieberater",
       bio: "Spezialist für die Integration von KI-Lösungen in bestehende Unternehmensstrukturen.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     },
     {
       name: "Sarah Becker",
       role: "Lead Developer",
       bio: "Leitet die technische Umsetzung unserer maßgeschneiderten Digitalisierungsprojekte.",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     }
   ];
 
@@ -63,7 +63,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
             className="mb-16"
           >
-            <h2 className="text-2xl font-bold mb-6">Unsere Vision</h2>
+            <h2 className="text-2xl font-bold mb-6 text-accent-teal">Unsere Vision</h2>
             <p className="text-neutral-600 mb-4">
               Bei DISRUPTIVE9 glauben wir an die transformative Kraft der Digitalisierung und künstlichen Intelligenz. Unser Ziel ist es, Unternehmen jeder Größe dabei zu unterstützen, ihre Prozesse zu optimieren, Effizienz zu steigern und im digitalen Zeitalter wettbewerbsfähig zu bleiben.
             </p>
@@ -77,7 +77,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-6">Unser Team</h2>
+            <h2 className="text-2xl font-bold mb-6 text-accent-teal">Unser Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
@@ -97,7 +97,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="font-bold">{member.name}</h3>
-                      <p className="text-accent-purple text-sm">{member.role}</p>
+                      <p className="text-accent-orange text-sm">{member.role}</p>
                     </div>
                   </div>
                   <p className="mt-4 text-neutral-600 text-sm">{member.bio}</p>

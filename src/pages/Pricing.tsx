@@ -52,7 +52,7 @@ const Pricing = () => {
       <header className="container-padding py-12 pt-32">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
-            className="heading-lg mb-6"
+            className="heading-lg mb-6 text-accent-teal"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -79,9 +79,9 @@ const Pricing = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <Card className={`h-full ${plan.popular ? 'border-accent-purple' : ''}`}>
+              <Card className={`h-full ${plan.popular ? 'border-accent-orange' : ''}`}>
                 {plan.popular && (
-                  <div className="bg-accent-purple text-white text-center py-1 text-sm font-medium">
+                  <div className="bg-accent-orange text-white text-center py-1 text-sm font-medium">
                     Beliebt
                   </div>
                 )}
@@ -97,14 +97,18 @@ const Pricing = () => {
                   <ul className="space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent-purple flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-accent-orange flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <button className={`w-full py-3 rounded-lg font-medium ${plan.popular ? 'button-secondary' : 'button-primary'}`}>
+                  <button className={`w-full py-3 rounded-lg font-medium ${
+                    plan.popular 
+                      ? 'bg-accent-orange text-white hover:bg-accent-orange/90' 
+                      : 'bg-accent-teal text-white hover:bg-accent-teal/90'
+                  } transition-all duration-200 shadow-sm hover:shadow-md`}>
                     Kontakt aufnehmen
                   </button>
                 </CardFooter>

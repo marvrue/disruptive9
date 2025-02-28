@@ -7,12 +7,14 @@ const Features = () => {
     {
       title: "Intelligente Prozessoptimierung",
       description: "Analysieren, optimieren und automatisieren Sie Ihre Geschäftsprozesse mit KI-gestützten Tools und Technologien.",
-      points: ["Workflow-Analyse & Optimierung", "Prozessautomatisierung", "Datengesteuerte Entscheidungen"]
+      points: ["Workflow-Analyse & Optimierung", "Prozessautomatisierung", "Datengesteuerte Entscheidungen"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "KI-Integration für Unternehmen",
       description: "Implementieren Sie maßgeschneiderte KI-Lösungen, die präzise auf Ihre Geschäftsanforderungen zugeschnitten sind.",
-      points: ["KI-gestützte Datenanalyse", "Intelligente Automatisierung", "Prädiktive Analysen"]
+      points: ["KI-gestützte Datenanalyse", "Intelligente Automatisierung", "Prädiktive Analysen"],
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
@@ -20,7 +22,7 @@ const Features = () => {
     <section className="py-24">
       <div className="container-padding">
         <div className="text-center mb-16">
-          <span className="bg-accent-purple/10 text-accent-purple px-4 py-1.5 rounded-full text-sm font-medium">
+          <span className="bg-accent-orange/10 text-accent-orange px-4 py-1.5 rounded-full text-sm font-medium">
             UNSERE LEISTUNGEN
           </span>
           <h2 className="heading-lg mt-6">Supercharge Your Workflows</h2>
@@ -37,10 +39,10 @@ const Features = () => {
               <ul className="space-y-4">
                 {feature.points.map((point) => (
                   <li key={point} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-accent-purple/10 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-accent-purple" />
+                    <div className="w-5 h-5 rounded-full bg-accent-orange/10 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-accent-orange" />
                     </div>
-                    {point}
+                    <span>{point}</span>
                   </li>
                 ))}
               </ul>
@@ -54,7 +56,7 @@ const Features = () => {
             <div className="flex-1">
               <Card className="glass-panel p-6 rounded-2xl">
                 <img 
-                  src="/placeholder.svg" 
+                  src={feature.image} 
                   alt={feature.title}
                   className="w-full h-auto rounded-lg"
                 />

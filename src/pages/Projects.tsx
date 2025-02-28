@@ -10,25 +10,25 @@ const Projects = () => {
       title: "KI-gestützte Sales-Automatisierung",
       description: "Implementierung einer intelligenten CRM-Lösung mit automatisiertem Lead-Scoring und Prognosemodellen.",
       client: "Finanzdienstleister",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "Intelligente Kundenservice-Plattform",
       description: "Entwicklung eines KI-gesteuerten Support-Systems mit automatischer Anfragenklassifizierung und -bearbeitung.",
       client: "E-Commerce Unternehmen",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "Automatisierte Dokumentenverarbeitung",
       description: "Implementierung eines Systems zur automatisierten Extraktion, Klassifizierung und Verarbeitung von Geschäftsdokumenten.",
       client: "Versicherungsunternehmen",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       title: "Smart Recruiting Plattform",
       description: "Entwicklung einer KI-basierten Lösung zur Optimierung des Recruitingprozesses mit automatischer Bewerbungsbewertung.",
       client: "Personaldienstleister",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
@@ -65,17 +65,19 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <Card className="h-full">
+              <Card className="h-full overflow-hidden">
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>Kunde: {project.client}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover rounded-md mb-4"
-                  />
+                  <div className="h-48 overflow-hidden rounded-md mb-4">
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                    />
+                  </div>
                   <p className="text-neutral-600">{project.description}</p>
                 </CardContent>
               </Card>

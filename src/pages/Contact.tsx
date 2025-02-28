@@ -32,7 +32,7 @@ const Contact = () => {
       <header className="container-padding py-12 pt-32">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
-            className="heading-lg mb-6"
+            className="heading-lg mb-6 text-accent-teal"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -59,7 +59,7 @@ const Contact = () => {
           >
             <Card>
               <CardHeader>
-                <CardTitle>Ihre Anfrage</CardTitle>
+                <CardTitle className="text-accent-teal">Ihre Anfrage</CardTitle>
                 <CardDescription>Teilen Sie uns Ihr Anliegen mit, und wir melden uns zeitnah bei Ihnen.</CardDescription>
               </CardHeader>
               <CardContent>
@@ -113,7 +113,9 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <button type="submit" className="button-secondary w-full">
+                  <button type="submit" className="w-full py-3 bg-accent-orange text-white rounded-lg 
+                           hover:bg-accent-orange/90 transition-all duration-200
+                           font-medium tracking-wide shadow-sm hover:shadow-md">
                     Anfrage senden
                   </button>
                 </form>
@@ -127,16 +129,16 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-12 text-center"
           >
-            <h3 className="text-xl font-bold mb-2">Oder kontaktieren Sie uns direkt</h3>
+            <h3 className="text-xl font-bold mb-2 text-accent-teal">Oder kontaktieren Sie uns direkt</h3>
             <p className="text-neutral-600 mb-4">
               Rufen Sie uns an oder schreiben Sie eine E-Mail
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
-              <a href="tel:+491234567890" className="text-accent-purple hover:underline">
+              <a href="tel:+491234567890" className="text-accent-orange hover:underline">
                 +49 123 456 7890
               </a>
               <span className="hidden md:inline text-neutral-400">|</span>
-              <a href="mailto:kontakt@disruptive9.de" className="text-accent-purple hover:underline">
+              <a href="mailto:kontakt@disruptive9.de" className="text-accent-orange hover:underline">
                 kontakt@disruptive9.de
               </a>
             </div>

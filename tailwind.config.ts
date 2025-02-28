@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,7 +30,7 @@ export default {
           foreground: "#FAFAF8",
         },
         secondary: {
-          DEFAULT: "#8989DE",
+          DEFAULT: "#f2942f",
           foreground: "#141413",
         },
         neutral: {
@@ -43,8 +44,8 @@ export default {
           800: "#3A3935",
         },
         accent: {
-          purple: "#8989DE",
-          blue: "#61AAF2",
+          orange: "#f2942f",
+          teal: "#294248",
           green: "#7EBF8E",
         },
       },
