@@ -1,17 +1,18 @@
+
 import { Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Features = () => {
   const features = [
     {
-      title: "Intelligent Task Management",
-      description: "Streamline your tasks and collaborate seamlessly with our cutting-edge SaaS startup platform.",
-      points: ["Smart Task Assignment", "Real-time Collaboration", "Data Security & Privacy"]
+      title: "Intelligente Prozessoptimierung",
+      description: "Analysieren, optimieren und automatisieren Sie Ihre Geschäftsprozesse mit KI-gestützten Tools und Technologien.",
+      points: ["Workflow-Analyse & Optimierung", "Prozessautomatisierung", "Datengesteuerte Entscheidungen"]
     },
     {
-      title: "Advanced Analytics",
-      description: "Harness the power of AI-driven analytics to optimize your campaigns and understand your audience better.",
-      points: ["Smart Audience Segmentation", "Predictive Performance", "Real-time Visualization"]
+      title: "KI-Integration für Unternehmen",
+      description: "Implementieren Sie maßgeschneiderte KI-Lösungen, die präzise auf Ihre Geschäftsanforderungen zugeschnitten sind.",
+      points: ["KI-gestützte Datenanalyse", "Intelligente Automatisierung", "Prädiktive Analysen"]
     }
   ];
 
@@ -20,11 +21,11 @@ const Features = () => {
       <div className="container-padding">
         <div className="text-center mb-16">
           <span className="bg-accent-purple/10 text-accent-purple px-4 py-1.5 rounded-full text-sm font-medium">
-            TWO-COL FEATURES
+            UNSERE LEISTUNGEN
           </span>
           <h2 className="heading-lg mt-6">Supercharge Your Workflows</h2>
           <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
-            Unlock your team's true potential with our state-of-the-art SaaS platform.
+            Entfesseln Sie das volle Potenzial Ihres Unternehmens mit unseren innovativen Digitallösungen.
           </p>
         </div>
 
@@ -44,9 +45,9 @@ const Features = () => {
                 ))}
               </ul>
               <div className="mt-8 flex gap-4">
-                <button className="button-primary">Start 14-day trial</button>
+                <button className="button-primary">Kontakt aufnehmen</button>
                 <button className="px-6 py-3 text-neutral-600 hover:text-primary transition-colors">
-                  Contact Sales
+                  Mehr Informationen
                 </button>
               </div>
             </div>
