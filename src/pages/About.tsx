@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const About = () => {
   const teamMembers = [
     {
-      name: "Dr. Markus Weber",
+      name: "Marvin Rützel",
       role: "Gründer & Geschäftsführer",
-      bio: "Mit über 15 Jahren Erfahrung in der digitalen Transformation und KI-Implementation.",
+      bio: "Mit über 10 Jahren Erfahrung in der Realwirtschaft und OpEx-Specialist für digitale Transformation und KI-Implementation.",
       image: "/placeholder.svg"
     },
     {
