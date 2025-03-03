@@ -1,30 +1,23 @@
 
-import { useState } from "react";
+import { useEffect } from "react";
 import Navigation from "@/components/landing/Navigation";
 import Footer from "@/components/landing/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: ""
-  });
+  useEffect(() => {
+    // Load HubSpot form script
+    const script = document.createElement('script');
+    script.src = "https://js.hsforms.net/forms/embed/49450873.js";
+    script.defer = true;
+    document.body.appendChild(script);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Contact form submitted:", formData);
-    // Hier würde die tatsächliche Kontaktformular-Logik implementiert werden
-  };
+    return () => {
+      // Clean up the script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-neutral-100">
@@ -63,62 +56,13 @@ const Contact = () => {
                 <CardDescription>Teilen Sie uns Ihr Anliegen mit, und wir melden uns zeitnah bei Ihnen.</CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input 
-                      id="name" 
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Vor- und Nachname" 
-                      required 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email">E-Mail</Label>
-                    <Input 
-                      id="email" 
-                      name="email"
-                      type="email" 
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="name@firma.de" 
-                      required 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Unternehmen</Label>
-                    <Input 
-                      id="company" 
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Firmenname" 
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Nachricht</Label>
-                    <textarea 
-                      id="message" 
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Wie können wir Ihnen helfen?" 
-                      className="w-full h-32 px-3 py-2 text-sm rounded-md border border-input bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                      required 
-                    />
-                  </div>
-                  
-                  <button type="submit" className="w-full py-3 bg-accent-orange text-white rounded-lg 
-                           hover:bg-accent-orange/90 transition-all duration-200
-                           font-medium tracking-wide shadow-sm hover:shadow-md">
-                    Anfrage senden
-                  </button>
-                </form>
+                {/* HubSpot Form */}
+                <div 
+                  className="hs-form-frame" 
+                  data-region="na1" 
+                  data-form-id="ad84b4db-c0d7-4bda-bb0e-97566bfb8672" 
+                  data-portal-id="49450873"
+                ></div>
               </CardContent>
             </Card>
           </motion.div>

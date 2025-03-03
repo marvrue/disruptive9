@@ -1,6 +1,7 @@
 
 import { Check } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   const features = [
@@ -47,10 +48,10 @@ const Features = () => {
                 ))}
               </ul>
               <div className="mt-8 flex gap-4">
-                <button className="button-primary">Kontakt aufnehmen</button>
-                <button className="px-6 py-3 text-neutral-600 hover:text-primary transition-colors">
+                <Link to="/contact" className="button-primary">Kontakt aufnehmen</Link>
+                <Link to="/projects" className="px-6 py-3 text-neutral-600 hover:text-primary transition-colors">
                   Mehr Informationen
-                </button>
+                </Link>
               </div>
             </div>
             <div className="flex-1">
